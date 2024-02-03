@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <a href="#" class="logo"><span>s</span>hawky</a>
+
+        <ul class="navbar">
+            <li><a href="#" class="active">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">contacts</a></li>
+        </ul>
+
+        <div class="menu-btn">
+            <div class="bx bx-menu" id="menu-icon"><span>intro</span><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home">
+        <div class="home-text">
+            <span>front end developer</span>
+            <h1>madie leea</h1>
+            <p>i'm designer, illustrator, and creator of courses,
+                templates, wireframe kits,and the occasionally useful
+                side-projects.</p>
+                <div class="main-btn">
+                    <a href="#" class="btn">download cv</a>
+                    <a href="#" class="btn two">hire me niw</a>
+                </div>
+        </div>
+        <div class="home-image">
+            <!-- <img src="home.png" alt=""> -->
+        </div>
+
+    </section>
+        <div class="share">
+            <p>check out me:</p>
+
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            let menu = document.querySelector('#menu-icon');
+            let navbar = document.querySelector('.navbar');
+
+            menu.onclick = () => {
+                menu.classList.toggle('bx-x');
+                navbar.classList.toggle('open')
+            };
+
+            const sr = ScrollReveal ({
+                distance: '40px',
+                duration: 2500,
+                resat: true
+            });
+            sr.reveal('.logo',{delay:200, origin: 'left'});
+            sr.reveal('.navbar',{delay:400, origin: 'top'});
+            sr.reveal('.menu-btn',{delay:520, origin: 'right'});
+            sr.reveal('.home-text span',{delay:600, origin: 'top'});
+            sr.reveal('.home-text h1',{delay:680, origin: 'left'});
+            sr.reveal('.home-text p',{delay:750, origin: 'right'});
+            sr.reveal('.main-btn',{delay:860, origin: 'left'});
+            sr.reveal('.share',{delay:950, origin: 'bottom'});
+            sr.reveal('.home-img',{delay:1000, origin: 'right'});
+        </script>
+    </body>
+</html>
